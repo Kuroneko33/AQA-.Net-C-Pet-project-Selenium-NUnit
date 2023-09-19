@@ -59,10 +59,7 @@ namespace Autotests_Training_project.WebPages
                     CreateNewDriver();
 
                 if (_needsLazyReload)
-                {
-                    driver.Navigate().GoToUrl(_urlToLoad);
-                    _needsLazyReload = false;
-                }
+                    ReloadPage();
 
                 return driver;
             }
